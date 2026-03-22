@@ -1,0 +1,59 @@
+[project]
+name = "your-service-name"
+version = "0.1.0"
+description = "Replace with service description"
+readme = "README.md"
+# Team CI/target: 3.12 (see `.python-version`). Relaxed minimum for mixed laptops; tighten per org policy.
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "pytest-cov>=4.0",
+  "ruff>=0.8.0",
+  "mypy>=1.13",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# Rename package path and project.name when copying into a real service repo.
+[tool.hatch.build.targets.wheel]
+packages = ["src/your_package"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = [
+  "E",
+  "W",
+  "F",
+  "I",
+  "B",
+  "UP",
+  "SIM",
+]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.mypy]
+python_version = "3.9"
+strict = false
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+mypy_path = "src"
+packages = ["your_package"]  # must match directory under src/

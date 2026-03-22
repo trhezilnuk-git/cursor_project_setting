@@ -1,0 +1,11 @@
+---
+description: Team-wide standards — security, secrets, and collaboration
+alwaysApply: true
+---
+
+# Core standards
+
+- Never commit secrets, API keys, tokens, or production credentials. Use environment variables and secret managers; keep `.env` out of git.
+- Prefer small, reviewable changes. AI-generated code must be reviewed like any other code.
+- Match existing project layout, naming, and patterns before introducing new abstractions.
+- Document non-obvious behavior in code or module docstrings; avoid redundant comments on obvious lines.

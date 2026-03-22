@@ -1,0 +1,31 @@
+# Dependencies & environments
+.venv/
+venv/
+env/
+.pdm-python/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Caches & tools
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Secrets & local env (never index)
+.env
+.env.*
+!.env.example
+
+# Large / generated
+*.sqlite3
+*.db
+node_modules/

@@ -1,0 +1,13 @@
+---
+description: Python style, typing, and structure for backend services
+globs: **/*.py
+alwaysApply: false
+---
+
+# Python
+
+- Use type hints on public functions and module boundaries; run the team’s type checker (e.g. mypy) before merge.
+- Prefer `pathlib` over string paths; use context managers for resources that need cleanup.
+- Raise specific exceptions; avoid bare `except:` or empty `except Exception` without re-raise or logging.
+- Keep functions focused; extract helpers when nesting or duplication grows.
+- Format and lint with Ruff (see `pyproject.toml`). Imports: isort-compatible grouping via Ruff.
