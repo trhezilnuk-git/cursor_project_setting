@@ -21,7 +21,7 @@ From the **root of your service repo** (the same folder you open in Cursor):
 
 ```bash
 # Clone only the template files you need, or clone full repo to a temp dir and copy.
-git clone --depth 1 https://github.com/YOUR_ORG/cursor_project_setting.git /tmp/cursor_project_setting
+git clone --depth 1 https://github.com/trhezilnuk-git/cursor_project_setting.git /tmp/cursor_project_setting
 cp -R /tmp/cursor_project_setting/.cursor .
 cp -R /tmp/cursor_project_setting/.vscode .
 cp /tmp/cursor_project_setting/.cursorignore .
@@ -38,7 +38,7 @@ Then edit `pyproject.toml` (`name`, `packages`, `your_package`) and `AGENTS.md` 
 ## Use as a new service template
 
 ```bash
-git clone https://github.com/YOUR_ORG/cursor_project_setting.git my-new-service
+git clone https://github.com/trhezilnuk-git/cursor_project_setting.git my-new-service
 cd my-new-service
 rm -rf .git
 git init
@@ -54,4 +54,8 @@ pip install -e ".[dev]"
 ruff check . && ruff format . && pytest
 ```
 
-Replace `YOUR_ORG` in the clone URL after this repository is published under your GitHub user or organization.
+## Python version
+
+`.python-version` targets **3.12** for pyenv-style workflows. `pyproject.toml` sets `requires-python = ">=3.9"` so older laptops can still install dev tools; if your org standardizes on 3.12 only, change that field to `>=3.12` and align `tool.mypy.python_version`.
+
+Fork or transfer the repository if your team uses a GitHub organization; update clone URLs accordingly.
