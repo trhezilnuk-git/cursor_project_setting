@@ -2,6 +2,8 @@
 
 Shared **Cursor**, **VS Code workspace**, and **Python tooling** files for multi-repo Python services. Paths match what Cursor uses when you open a project folder (repository root).
 
+**한국어 단계별 설정:** [설정 가이드 (docs/설정_가이드.md)](docs/설정_가이드.md) — 처음부터 끝까지 따라 하면 적용이 완료되도록 정리했습니다.
+
 ## What is included
 
 | Path | Purpose |
